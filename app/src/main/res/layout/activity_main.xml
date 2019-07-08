@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme.Home"
+    style="@style/AppTheme.Home"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="22sp"
+        android:layout_below="@id/subRecyclerView"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto_regular"
+        android:id="@+id/welcome"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:id="@+id/searchView"
+        app:queryHint="enter your search here"
+        android:iconifiedByDefault="false"
+       >
+        <requestFocus/>
+    </androidx.appcompat.widget.SearchView>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/scan"
+        android:id="@+id/imgScan"
+        android:layout_marginTop="70dp"
+        android:layout_below="@id/welcome"
+        android:elevation="10dp"
+        android:textColor="@android:color/black"
+        android:layout_toStartOf="@id/imgCamera"
+        android:layout_marginEnd="50dp"
+        android:scaleType="centerCrop"/>
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/law"
+        android:id="@+id/imgHistory"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/welcome"
+        android:elevation="10dp"
+        android:textColor="@android:color/black"
+        android:layout_toStartOf="@id/imgScan"
+        android:layout_marginEnd="40dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/txtHistory"
+        android:layout_below="@+id/imgHistory"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_toStartOf="@id/imgScan"
+        android:layout_marginEnd="30dp"
+        android:textAlignment="center"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/searchView"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:id="@+id/subRecyclerView"
+        android:layout_marginTop="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_marginBottom="70dp"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@id/imgScan"
+        android:id="@+id/txtScan"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_toStartOf="@id/imgCamera"
+        android:layout_marginEnd="40dp"
+        android:textAlignment="center"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imgCamera"
+        android:src="@drawable/camera"
+        android:layout_below="@id/welcome"
+        android:layout_marginTop="70dp"
+        android:elevation="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Picture"
+        android:layout_below="@id/imgCamera"
+        android:layout_marginBottom="70dp"
+        android:id="@+id/txtPicture"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"/>
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@drawable/selector_btn"
+        android:text="Cancel"
+        android:layout_marginStart="20dp"
+        android:id="@+id/btnCancel"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        />
+    <Button
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Done"
+        android:layout_marginEnd="20dp"
+
+        android:width="150dp"
+        android:id="@+id/btnDone"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:textColor="@drawable/selector_btn"
+       />
+
+    <TextView
+        android:id="@+id/txtScannedText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="100dp"
+        android:textSize="15sp"
+        android:visibility="gone"
+        android:textColor="@color/colorWhite"
+         />
+
+
+
+
+</RelativeLayout>

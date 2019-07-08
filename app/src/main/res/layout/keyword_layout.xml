@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="72dp"
+    android:background="@drawable/item_background_selector">
+
+    <TextView
+        android:layout_toRightOf="@+id/keyImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtWordName"
+        android:textSize="18sp"
+        android:fontFamily="@font/roboto_regular"
+
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorBlack"
+        android:text="Atomic Size"/>
+
+
+
+    <TextView
+        android:layout_toRightOf="@+id/keyImageView"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/txtWordName"
+
+        android:id="@+id/txtWordDescription"
+
+
+
+        android:text="bonding is the tendency to have completely filled outer
+   energy levels (like the noble gases). The various inter-
+    atomic bonds are formed in the bid of the atoms to be
+    isoelectroni in the outer energy level with the noble
+    gases. This more stable form may be achieved by losing"/>
+
+    <ImageView
+        android:id="@+id/keyImageView"
+        android:layout_marginEnd= "16dp"
+        android:src="@drawable/chemistry1"
+        android:layout_width="100dp"
+        android:layout_height="56dp"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        />
+
+
+
+
+
+
+</RelativeLayout>
